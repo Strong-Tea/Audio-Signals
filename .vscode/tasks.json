@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc build active file",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "wave.c",
+                "waves.c",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lm",
+                "-lsndfile",
+                "-I/usr/include/libsndfile"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
